@@ -1,0 +1,5 @@
+{% macro input(label, name, value, type, size, placeholder) %}
+<label>{{ label }}
+    <input type="{{ type|default('text') }}" name="{{ name }}"{% if value %} value="{{ value }}"{% endif %} size="{{ size|default(30) }}"{% if placeholder %} placeholder={{ placeholder }}"{% endif %}>
+</label>
+{% endmacro %}
