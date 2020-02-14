@@ -47,13 +47,8 @@
                         {% if member.status== 'review' %} danger {% endif %}
                     ">
                     </tr>
-                    {% if member.title is defined and member.title %}
-                        <td><strong>{{member.title}}</strong></td>
-                    {% else %}
-                        <td><strong>Not exists</strong></td>
-                    {% endif %}
-                    <td>{{member.content}}</td>
-                    <td>{{member.date}}</td>
+                    {% include 'newsBlog.html.twig' with {'title':member.title, 'content':member.content, 'date':member.date} %}
+                    
                     {% endfor %}
                 </tbody>
             </table>

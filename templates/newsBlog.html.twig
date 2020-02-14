@@ -1,0 +1,15 @@
+{% if title is defined and title %}
+    <td><strong>{{title}}</strong></td>
+{% else %}
+    <td><strong>Not exists</strong></td>
+{% endif %}
+{% if content is defined and content %}
+    <td>{{content}}</td>
+{% else %}
+    <td>Not exists</td>
+{% endif %}
+{% if date is defined and date %}
+    <td>{{date}}</td>
+{% else %}
+    <td>Not exists</td>
+{% endif %}
